@@ -7,11 +7,23 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
 const SwipperHero = () => {
-  const images = [
-    "/assets/images/h1.jpeg",
-    "/assets/images/h2.jpeg",
-    "/assets/images/h3.jpeg",
-    "/assets/images/h4.jpeg",
+  const slides = [
+    {
+      src: "/assets/images/fotbar.jpeg",
+      text: "Selamat Datang di TK Al Ishlah",
+    },
+    {
+      src: "/assets/images/5.jpeg",
+      text: "Belajar dengan Cinta dan Kasih Sayang",
+    },
+    {
+      src: "/assets/images/2.jpeg",
+      text: "Membangun Generasi Cerdas dan Berakhlak Mulia",
+    },
+    {
+      src: "/assets/images/4.jpeg",
+      text: "Lingkungan Belajar yang Kreatif dan Menyenangkan",
+    },
   ];
 
   return (
@@ -22,26 +34,26 @@ const SwipperHero = () => {
         slidesPerView={1}
         autoplay={{ delay: 3000 }}
         loop={true}
-        className="w-full h-[300px] md:h-[500px]"
+        className="w-full h-[400px] md:h-[750px]"
       >
-        {images.map((src, index) => (
-          <SwiperSlide key={index}>
-            <div className="relative w-full h-full">
-              {/* Image */}
-              <Image
-                src={src}
-                alt={`Slide ${index + 1}`}
-                fill
-                className="object-cover"
-                priority={index === 0}
-              />
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black/40"></div>
+        {slides.map((slide, index) => (
+          <SwiperSlide key={index} className="relative w-full h-full">
+            {/* Image */}
+            <Image
+              src={slide.src}
+              alt={`Slide ${index + 1}`}
+              fill
+              className="object-cover object-top"
+              priority={index === 0}
+            />
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/40"></div>
 
-              {/* Optional Content on Overlay */}
-              <div className="absolute inset-0 flex items-center justify-center text-white text-xl md:text-3xl font-bold">
-                Welcome to Slide {index + 1}
-              </div>
+            {/* Text Overlay */}
+            <div className="absolute inset-0 flex items-center justify-center px-4">
+              <h2 className="text-center text-white text-2xl md:text-5xl font-extrabold drop-shadow-lg">
+                {slide.text}
+              </h2>
             </div>
           </SwiperSlide>
         ))}
