@@ -1,12 +1,9 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
 
 const ProfilePage = () => {
   return (
     <div>
-      <Navbar />
       <div className="w-full min-h-screen bg-slate-50 px-6 md:px-32 py-16">
         <Link href="/" className="text-blue-600 mb-4 inline-block">
           &larr; Kembali ke Beranda
