@@ -3,22 +3,22 @@ import Image from "next/image";
 
 const teachers = [
   {
-    name: "Bu Ani",
+    name: "[nama]",
     role: "Kepala Sekolah",
     photo: "/assets/images/avatar.jpg",
   },
   {
-    name: "Pak Budi",
+    name: "[nama]",
     role: "Guru Kelas A",
     photo: "/assets/images/avatar.jpg",
   },
   {
-    name: "Bu Citra",
+    name: "[nama]",
     role: "Guru Kelas B",
     photo: "/assets/images/avatar.jpg",
   },
   {
-    name: "Bu Dina",
+    name: "[nama]",
     role: "Guru Pendamping",
     photo: "/assets/images/avatar.jpg",
   },

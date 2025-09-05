@@ -1,7 +1,18 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
 import { FaCircle } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Versidua = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // durasi animasi (ms)
+      once: true, // animasi hanya jalan sekali
+    });
+  }, []);
+
   const visiList = [
     "Membentuk Kepribadian Islam.",
     "Berilmu Pengetahuan Agama Secara Holistik.",
@@ -22,7 +33,10 @@ const Versidua = () => {
   ];
 
   const Section = ({ title, items }) => (
-    <div className="pt-10 md:pt-16">
+    <div
+      className="pt-10 md:pt-16"
+      data-aos="fade-up" // <-- animasi disini
+    >
       <h2 className="text-left md:text-center text-4xl md:text-6xl">{title}</h2>
       <div className="pt-5">
         {/* mobile → list-disc, desktop → custom FaCircle */}
@@ -30,6 +44,8 @@ const Versidua = () => {
           {items.map((item, idx) => (
             <li
               key={idx}
+              data-aos="fade-up" // <-- item juga bisa animasi
+              data-aos-delay={idx * 100} // delay biar muncul bertahap
               className="md:flex md:items-center md:gap-3 md:justify-center md:text-center text-left"
             >
               <FaCircle className="hidden md:block" size={5} />
