@@ -9,7 +9,7 @@ const TopNav = () => {
       <div className="py-10 px-4 md:px-32 relative">
         <div className="w-full flex justify-between items-center">
           {/* Logo */}
-          <div className="font-bold text-3xl flex items-center gap-3">
+          <div className="font-bold text-4xl flex items-center gap-3">
             <Image
               src="/assets/images/logo.png"
               alt="al-islah"
@@ -25,8 +25,10 @@ const TopNav = () => {
               <MdEmail />
             </div>
             <div className="border-r border-slate-700 px-5">
-              <p className="font-light">Alamat Email</p>
-              <p className="font-bold tracking-wide">tkalislah@gmail.com</p>
+              <p className="font-light text-lg">Alamat Email</p>
+              <p className="font-bold tracking-wide text-xl">
+                tkalislah@gmail.com
+              </p>
             </div>
             <div className="flex gap-5 text-2xl pl-5">
               <FaWhatsapp fill="green" className="cursor-pointer" />

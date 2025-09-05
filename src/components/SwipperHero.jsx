@@ -34,7 +34,7 @@ const SwipperHero = () => {
         slidesPerView={1}
         autoplay={{ delay: 3000 }}
         loop={true}
-        className="w-full h-[400px] md:h-[750px]"
+        className="w-full h-[600px] md:h-[750px]"
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index} className="relative w-full h-full">

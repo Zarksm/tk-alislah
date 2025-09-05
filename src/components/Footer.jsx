@@ -8,10 +8,12 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-[#79BDEE] text-white">
+    // bg-[#79BDEE]
+    <footer className="bg-[#3396D3] text-white">
       {/* Copyright */}
-      <div className=" border-t border-white/40 py-5 text-center text-sm">
-        © {new Date().getFullYear()} TK Al Ishlah. All Rights Reserved.
+      <div className=" border-t border-white/40 py-5 text-center text-sm md:text-lg">
+        © {new Date().getFullYear()}{" "}
+        <span className="font-black">TK Al Ishlah</span>. All Rights Reserved.
       </div>
     </footer>
   );

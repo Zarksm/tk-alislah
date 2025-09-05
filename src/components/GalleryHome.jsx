@@ -5,32 +5,28 @@ const teachers = [
   {
     name: "Bu Ani",
     role: "Kepala Sekolah",
-    photo:
-      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&h=200&q=80",
+    photo: "/assets/images/avatar.jpg",
   },
   {
     name: "Pak Budi",
     role: "Guru Kelas A",
-    photo:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80",
+    photo: "/assets/images/avatar.jpg",
   },
   {
     name: "Bu Citra",
     role: "Guru Kelas B",
-    photo:
-      "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=200&h=200&q=80",
+    photo: "/assets/images/avatar.jpg",
   },
   {
     name: "Bu Dina",
     role: "Guru Pendamping",
-    photo:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&h=200&q=80",
+    photo: "/assets/images/avatar.jpg",
   },
 ];
 
 const Gallery = () => {
   return (
-    <div className="w-full py-12 bg-[#79BDEE]">
+    <div className="w-full py-12 bg-[#3396D3] md:px-20">
       {/* Title */}
       <h2 className="text-3xl font-extrabold text-center text-white drop-shadow-lg mb-10">
         Guru TK Al Ishlah
@@ -44,7 +40,7 @@ const Gallery = () => {
             className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition-transform duration-300"
           >
             {/* Foto Guru */}
-            <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-yellow-300 shadow-md">
+            <div className="w-36 h-36 rounded-full overflow-hidden shadow-md">
               <Image
                 src={teacher.photo}
                 alt={teacher.name}
@@ -55,7 +51,7 @@ const Gallery = () => {
             </div>
 
             {/* Nama */}
-            <h3 className="mt-4 text-lg font-bold text-[#79BDEE]">
+            <h3 className="mt-4 text-lg font-bold text-[#3396D3]">
               {teacher.name}
             </h3>
 
