@@ -41,11 +41,6 @@ const ProfilePage = () => {
     };
   }, []);
 
-  const openGoogleMaps = () => {
-    const url = `https://www.google.com/maps?q=${latitude},${longitude}`;
-    window.open(url, "_blank");
-  };
-
   return (
     <div className="w-full min-h-screen bg-slate-50 px-6 md:px-32 py-16">
       <Link href="/" className="text-blue-600 mb-16 flex items-center gap-2">
@@ -101,12 +96,14 @@ const ProfilePage = () => {
         <div id="map" className="w-full h-72 rounded-lg mb-4"></div>
 
         {/* Button Open Google Maps */}
-        <button
-          onClick={openGoogleMaps}
-          className="px-5 py-2 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition"
+        <a
+          href={`https://www.google.com/maps?q=${latitude},${longitude}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block px-5 py-2 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition"
         >
           Lihat di Google Maps
-        </button>
+        </a>
       </div>
     </div>
   );
